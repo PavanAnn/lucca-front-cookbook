@@ -1,24 +1,25 @@
 import React, { ReactNode } from 'react';
-import { Outlet } from 'react-router-dom';
-import { MainLayoutContainer, Header, Container, Footer, Sidebar, ContentWrapper, SearchBar, WebsiteName } from './styles';
+import { Outlet, useLocation } from 'react-router-dom';
+import { MainLayoutContainer, Container, Footer, Sidebar, ContentWrapper } from './styles';
+import Navbar from '../Navbar';
 
 
 const MainLayout = () => {
+
+    const location = useLocation()
+
     return (
         <MainLayoutContainer>
-            <Header>
-                <WebsiteName>Your Website</WebsiteName>
-                <SearchBar>
-                    <input type="text" placeholder="Search..." />
-                </SearchBar>
-            </Header>
+            
+            <Navbar />
             <Container>
-                <Sidebar>
-                    aaa
-                </Sidebar>
+                {location.pathname != '/' && 
+                    <Sidebar>
+                        aaa
+                    </Sidebar>
+                }
                 <ContentWrapper>
                 <Outlet />
-
                 </ContentWrapper>
             </Container>
             <Footer>

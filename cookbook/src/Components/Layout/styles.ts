@@ -7,38 +7,6 @@ export const MainLayoutContainer = styled.div`
   background-color: #DEECFA;
 `;
 
-export const Header = styled.header`
-  background-color: #84C1FD;
-    color: white;
-    text-align: center;
-    height: 80px;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-export const WebsiteName = styled.div`
-  font-size: 1.5rem;
-  margin-left: 20px;
-  margin-right: 20px;
-`;
-
-export const SearchBar = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  flex: 1;
-  height: 50%;
-
-    input{
-        border-radius: 16px;
-        width: 70%;
-        height: 90%;
-        font-size: 32px;
-    }
-`;
-
-
 export const Container = styled.div`
   flex: 1;
   display: flex;
